@@ -32,9 +32,10 @@
       <MediumModal class="" v-if="showPaymentDetails" @close="reload">
         <template v-slot:content>
           <form @submit.prevent="">
+            <SidebarMenu title="Card" />
             <div class="tw-flex">
               <Sidebar />
-              <div class="tw-pl-4">
+              <div class="tw-p-4">
                 <div
                   class="tw-flex tw-justify-between tw-items-center tw-mb-12"
                 >
@@ -46,9 +47,7 @@
                     </p>
                   </div>
                 </div>
-                <h3 class="tw-text-center tw-text-xl tw-mb-4">
-                  Enter your card details
-                </h3>
+                <h3 class="tw-text-sm tw-mb-4">Enter your card details</h3>
                 <NumberInput
                   placeHolder="0000 0000 0000 0000"
                   label="card number"

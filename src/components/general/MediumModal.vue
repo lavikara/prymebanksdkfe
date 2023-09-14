@@ -6,12 +6,12 @@
     <div class="container tw-m-4">
       <div class="card tw-relative tw-bg-white tw-rounded-lg" @click.stop>
         <img
-          class="close-btn tw-absolute tw-w-6 tw-bg-gray-light tw-rounded-full tw-cursor-pointer tw-p-1"
+          class="close-btn tw-absolute tw-w-6 tw-bg-gray tw-rounded-full tw-cursor-pointer tw-p-1"
           src="https://res.cloudinary.com/djalafcj9/image/upload/v1635485821/getequityV2/close_muxdyb.webp"
           alt="close icon"
           @click="$emit('close')"
         />
-        <div class="slot tw-p-4">
+        <div class="slot">
           <slot name="content">content</slot>
         </div>
       </div>

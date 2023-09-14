@@ -7,7 +7,7 @@
       <div class="card tw-bg-white tw-rounded-lg tw-py-8 tw-px-6" @click.stop>
         <div class="tw-relative">
           <img
-            class="close-btn tw-absolute tw-w-6 tw-bg-gray-light tw-rounded-full tw-cursor-pointer tw-p-1"
+            class="close-btn tw-absolute tw-w-6 tw-bg-gray tw-rounded-full tw-cursor-pointer tw-p-1"
             src="https://res.cloudinary.com/djalafcj9/image/upload/v1635485821/getequityV2/close_muxdyb.webp"
             alt="close icon"
             @click="$emit('close')"

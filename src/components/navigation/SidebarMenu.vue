@@ -3,9 +3,9 @@
     <li>
       <router-link
         :to="href"
-        class="tw-flex tw-py-5 tw-cursor-pointer hover:tw-text-primary"
+        class="tw-flex tw-font-bold tw-py-5 tw-cursor-pointer tw-text-white hover:tw-text-green-bg4"
       >
-        <span class="tw-pl-5">
+        <span class="">
           {{ title }}
         </span>
       </router-link>

@@ -19,21 +19,4 @@ export default {
     }
   }
 }
-
-*,
-#app {
-  input,
-  button,
-  div,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  span {
-    font-family: "Circular Std";
-  }
-}
 </style>

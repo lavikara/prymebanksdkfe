@@ -1,25 +1,41 @@
 @font-face {
-    font-family: "Circular Std";
-    src: local("Merienda"), url("~@/assets/styles/fonts/circularstd-book.otf") format("opentype");
+    font-family: 'ClashDisplay';
+    src: url('~@/assets/styles/fonts/NexaLight.otf') format('opentype');
+         font-weight: 300;
+         font-display: swap;
+         font-style: normal;
 }
 
 @font-face {
-    font-family: "Circular Std Medium";
-    src: local("Merienda"), url("~@/assets/styles/fonts/circularstd-medium.otf") format("opentype");
-    font-weight: medium;
-    font-style: normal;
+    font-family: 'ClashDisplay Normal';
+    src: url('~@/assets/styles/fonts/NexaRegular.otf') format('opentype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: normal;
 }
 
 @font-face {
-    font-family: "Circular Std Bold";
-    src: local("Merienda"), url("~@/assets/styles/fonts/circularstd-bold.otf") format("opentype");
-    font-weight: bold;
-    font-style: normal;
+    font-family: 'ClashDisplay Medium';
+    src:  
+         url('~@/assets/styles/fonts/NexaBold.otf') format('opentype');
+         font-weight: 500;
+         font-display: swap;
+         font-style: normal;
 }
 
 @font-face {
-    font-family: "Circular Std Normal";
-    src: local("Merienda"), url("~@/assets/styles/fonts/circularstd-normal.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'ClashDisplay Semibold';
+    src: url('~@/assets/styles/fonts/NexaHeavy.otf') format('opentype');
+         font-weight: 600;
+         font-display: swap;
+         font-style: normal;
 }
+
+@font-face {
+    font-family: 'ClashDisplay Bold';
+    src: url('~@/assets/styles/fonts/NexaBlack.otf') format('opentype');
+         font-weight: 700;
+         font-display: swap;
+         font-style: normal;
+}
+

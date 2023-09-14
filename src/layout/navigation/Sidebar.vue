@@ -1,21 +1,24 @@
 <template>
-  <div id="sidebar" class="xl:tw-inline-block tw-border-r tw-pr-4 tw-z-10">
-    <div
-      class="sidebar-container tw- tw-h-full tw-overflow-y-scroll tw-bg-white"
-    >
+  <div
+    id="sidebar"
+    class="tw-bg-green tw-border-r xl:tw-inline-block tw-py-4 tw-z-10"
+  >
+    <div class="sidebar-container tw-h-full tw-overflow-y-scroll">
       <nav>
-        <p>Pay With</p>
+        <p class="tw-whitespace-nowrap tw-text-white tw-px-6 tw-mb-12">
+          Pay With
+        </p>
         <div>
-          <SidebarMenu title="Card" />
+          <SidebarMenu title="Transfer" class="tw-border-t tw-px-6" />
         </div>
         <div>
-          <SidebarMenu title="Bank" />
+          <SidebarMenu title="Bank" class="tw-border-t tw-px-6" />
         </div>
         <div>
-          <SidebarMenu title="Transfer" />
+          <SidebarMenu title="Card" class="tw-border-t tw-px-6" />
         </div>
         <div>
-          <SidebarMenu title="USSD" />
+          <SidebarMenu title="USSD" class="tw-border-t tw-border-b tw-px-6" />
         </div>
       </nav>
     </div>
@@ -42,12 +45,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-#sidebar {
-  //   width: $side-bar-width;
-
-  .sidebar-container {
-    // width: $side-bar-width;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

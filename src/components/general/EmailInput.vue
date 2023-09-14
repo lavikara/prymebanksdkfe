@@ -1,6 +1,6 @@
 <template>
   <div class="tw-relative tw-flex tw-flex-col">
-    <label :for="label">{{ label }}</label>
+    <label :for="label" class="tw-text-sm">{{ label }}</label>
     <input
       type="email"
       class="tw-text- tw-rounded tw-p-4 focus:tw-border-primary"
