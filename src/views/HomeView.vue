@@ -1,5 +1,5 @@
 <template>
-  <div id="dashboard-view">
+  <div id="home-view">
     <Loader v-if="loading" />
     <div class="view-container">
       <div class="">
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#dashboard-view {
+#home-view {
   @include fadeIn;
 }
 </style>

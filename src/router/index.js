@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 const HomeView = () => import("@/views/HomeView.vue");
+const PaymentView = () => import("@/views/PaymentView.vue");
 
 const routes = [
   {
@@ -13,12 +14,42 @@ const routes = [
         redirect: { name: "PaymentDetails" },
       },
       {
-        path: "depositeStatus/:id",
+        path: "/depositeStatus/:id",
         name: "PaymentDetails",
         component: () =>
           import(
-            /* webpackChunkName: "dashboard" */
-            "@/layout/home/PaymentDetails.vue"
+            /* webpackChunkName: "sdk" */
+            "@/layout/home/Email.vue"
+          ),
+      },
+    ],
+  },
+  {
+    path: "/payment",
+    name: "PaymentView",
+    component: PaymentView,
+    children: [
+      {
+        path: "",
+        name: "DefaultPayment",
+        redirect: { name: "Card" },
+      },
+      {
+        path: "/transfer",
+        name: "Transfer",
+        component: () =>
+          import(
+            /* webpackChunkName: "sdk" */
+            "@/layout/payment/Transfer.vue"
+          ),
+      },
+      {
+        path: "/card",
+        name: "Card",
+        component: () =>
+          import(
+            /* webpackChunkName: "sdk" */
+            "@/layout/payment/Card.vue"
           ),
       },
     ],

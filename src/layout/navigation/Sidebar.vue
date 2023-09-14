@@ -5,7 +5,9 @@
   >
     <div class="sidebar-container tw-h-full tw-overflow-y-scroll">
       <nav>
-        <p class="tw-whitespace-nowrap tw-text-white tw-px-6 tw-mb-12">
+        <p
+          class="tw-whitespace-nowrap tw-font-bold tw-text-white tw-px-6 tw-mb-4 tw-mt-8"
+        >
           Pay With
         </p>
         <div>

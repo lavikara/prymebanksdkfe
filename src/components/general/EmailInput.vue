@@ -10,6 +10,7 @@
       v-model="value"
       @input="$emit('set', value)"
       @blur="$emit('validate', placeHolder)"
+      @keyup.enter="$emit('validate', placeHolder)"
       :placeholder="placeHolder"
       :disabled="disabled"
       required
