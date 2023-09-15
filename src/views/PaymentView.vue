@@ -5,8 +5,9 @@
       <template v-slot:content>
         <div class="tw-flex">
           <Sidebar />
-          <div class="view-container">
-            <div class="">
+          <div class="tw-w-full">
+            <div class="tw-p-4">
+              <TopHeader />
               <router-view v-slot="{ Component }">
                 <transition name="fade-transform" mode="out-in">
                   <component :is="Component" />
@@ -24,12 +25,14 @@
 import { mapActions, mapState } from "vuex";
 import MediumModal from "@/components/general/MediumModal.vue";
 import Sidebar from "@/layout/navigation/Sidebar.vue";
+import TopHeader from "@/layout/navigation/TopHeader.vue";
 
 export default {
   name: "DashboardView",
 
   components: {
     Sidebar,
+    TopHeader,
     MediumModal,
   },
 

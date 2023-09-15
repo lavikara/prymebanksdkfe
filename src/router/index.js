@@ -10,16 +10,16 @@ const routes = [
     children: [
       {
         path: "",
-        name: "DefaultPaymentDetails",
-        redirect: { name: "PaymentDetails" },
+        name: "DefaultHomeView",
+        redirect: { name: "EmailLayout" },
       },
       {
-        path: "/depositeStatus/:id",
-        name: "PaymentDetails",
+        path: "/depositestatus/:id",
+        name: "EmailLayout",
         component: () =>
           import(
-            /* webpackChunkName: "sdk" */
-            "@/layout/home/Email.vue"
+            /* webpackChunkName: "homeview" */
+            "@/layout/home/EmailLayout.vue"
           ),
       },
     ],
@@ -31,25 +31,25 @@ const routes = [
     children: [
       {
         path: "",
-        name: "DefaultPayment",
-        redirect: { name: "Card" },
+        name: "DefaultPaymentView",
+        redirect: { name: "TransferLayout" },
       },
       {
-        path: "/transfer",
-        name: "Transfer",
+        path: "/payment/transfer",
+        name: "TransferLayout",
         component: () =>
           import(
-            /* webpackChunkName: "sdk" */
-            "@/layout/payment/Transfer.vue"
+            /* webpackChunkName: "PaymentView" */
+            "@/layout/payment/TransferLayout.vue"
           ),
       },
       {
-        path: "/card",
-        name: "Card",
+        path: "/payment/card",
+        name: "CardLayout",
         component: () =>
           import(
-            /* webpackChunkName: "sdk" */
-            "@/layout/payment/Card.vue"
+            /* webpackChunkName: "PaymentView" */
+            "@/layout/payment/CardLayout.vue"
           ),
       },
     ],

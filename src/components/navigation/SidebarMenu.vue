@@ -3,7 +3,7 @@
     <li>
       <router-link
         :to="href"
-        class="tw-flex tw-font-bold tw-py-4 tw-cursor-pointer tw-text-white hover:tw-text-green-bg4"
+        class="tw-flex tw-font-bold tw-cursor-pointer tw-text-white hover:tw-text-green-bg4 tw-pl-4 tw-pr-6 tw-py-4"
       >
         <span class="">
           {{ title }}

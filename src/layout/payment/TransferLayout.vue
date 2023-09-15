@@ -1,15 +1,17 @@
 <template>
   <div>
-    <CardPopup />
+    <TransferPopup />
   </div>
 </template>
 
 <script>
-import CardPopup from "@/components/payment/CardPopup.vue";
+import TransferPopup from "@/components/payment/TransferPopup.vue";
 
 export default {
+  name: "TransferLayout",
+
   components: {
-    CardPopup,
+    TransferPopup,
   },
 };
 </script>

@@ -5,22 +5,31 @@
   >
     <div class="sidebar-container tw-h-full tw-overflow-y-scroll">
       <nav>
-        <p
-          class="tw-whitespace-nowrap tw-font-bold tw-text-white tw-px-6 tw-mb-4 tw-mt-8"
+        <h3
+          class="tw-whitespace-nowrap tw-font-bold tw-text-white tw-text-xs tw-pl-4 tw-pr-6 tw-mb-4 tw-mt-8"
         >
-          Pay With
-        </p>
+          PAY WITH
+        </h3>
         <div>
-          <SidebarMenu title="Transfer" class="tw-border-t tw-px-6" />
+          <SidebarMenu
+            title="Transfer"
+            :href="{ name: 'TransferLayout' }"
+            class="tw-border-t"
+          />
         </div>
         <div>
-          <SidebarMenu title="Bank" class="tw-border-t tw-px-6" />
+          <SidebarMenu
+            title="Card"
+            :href="{ name: 'CardLayout' }"
+            class="tw-border-t"
+          />
         </div>
         <div>
-          <SidebarMenu title="Card" class="tw-border-t tw-px-6" />
+          <SidebarMenu title="Bank" class="tw-border-t" />
         </div>
+
         <div>
-          <SidebarMenu title="USSD" class="tw-border-t tw-border-b tw-px-6" />
+          <SidebarMenu title="USSD" class="tw-border-t tw-border-b" />
         </div>
       </nav>
     </div>

@@ -1,15 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent="" class="tw-p-4">
-      <div class="tw-flex tw-justify-between tw-items-center tw-mb-12">
-        <img class="tw-w-10" src="@/assets/img/logo.png" alt="info" />
-        <div>
-          <p>{{ email }}</p>
-          <p class="tw-text-blue">
-            Pay {{ formatCurrency(depositeStatus?.amount, 2, "NGN") }}
-          </p>
-        </div>
-      </div>
+    <form @submit.prevent="">
       <h3 class="tw-text-sm tw-mb-4">Enter your card details</h3>
       <NumberInput
         placeHolder="0000 0000 0000 0000"
@@ -53,11 +44,10 @@
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex";
+import { mapState } from "vuex";
 import MediumModal from "@/components/general/MediumModal.vue";
 import NumberInput from "@/components/general/NumberInput.vue";
 import Btn from "@/components/general/BtnComponent.vue";
-import { formatCurrency } from "@/utils/helpers.js";
 
 export default {
   name: "CardPopup",
@@ -66,10 +56,6 @@ export default {
     MediumModal,
     NumberInput,
     Btn,
-  },
-
-  props: {
-    email: { type: String, default: () => "", required: true },
   },
 
   data() {
@@ -83,8 +69,6 @@ export default {
   },
 
   methods: {
-    formatCurrency,
-
     pay() {},
 
     setCardNumber() {},
@@ -92,10 +76,6 @@ export default {
     setCvvNumber() {},
 
     setCardExpiryNumber() {},
-
-    reload() {
-      location.reload();
-    },
   },
 };
 </script>

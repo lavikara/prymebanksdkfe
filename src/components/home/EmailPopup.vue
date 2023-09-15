@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <Teleport to="#teleport-modal"> -->
     <SmallModal @close="removeIframe">
       <template v-slot:content>
         <form @submit.prevent="">
@@ -14,7 +13,7 @@
             label="Enter email to get your receipt"
             :email="payload.email"
             :error="emailError || {}"
-            @set="setEmail"
+            @set="setEmailValue"
             @validate="validateMethod"
           />
           <div class="tw-flex tw-gap-8 tw-mt-12">
@@ -23,7 +22,6 @@
         </form>
       </template>
     </SmallModal>
-    <!-- </Teleport> -->
   </div>
 </template>
 
@@ -67,10 +65,12 @@ export default {
   computed: {
     ...mapState({
       depositeStatus: (state) => state.depositeStatus,
+      email: (state) => state.email,
     }),
   },
 
   methods: {
+    ...mapActions(["setEmail"]),
     formatCurrency,
 
     validateMethod(field) {
@@ -82,7 +82,8 @@ export default {
           this.v$.payload.email.$touch();
           if (this.v$.$errors.length === 0) {
             this.emailError = {};
-            this.$emit("valid", { email: this.payload.email });
+            this.$emit("valid");
+            this.setEmail(this.payload.email);
             return;
           }
           this.emailError = this.v$.$errors[0];
@@ -93,12 +94,12 @@ export default {
       }
     },
     removeIframe() {
-      console.log(location.ancestorOrigins);
-      location.replace(location.ancestorOrigins[0]);
-      location.reload();
+      //   console.log(location.ancestorOrigins);
+      //   location.replace(location.ancestorOrigins[0]);
+      //   location.reload();
     },
 
-    setEmail(email) {
+    setEmailValue(email) {
       this.payload.email = email;
       this.validate = false;
     },

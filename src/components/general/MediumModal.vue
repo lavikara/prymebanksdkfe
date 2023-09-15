@@ -5,12 +5,20 @@
   >
     <div class="container tw-m-4">
       <div class="card tw-relative tw-bg-white tw-rounded-lg" @click.stop>
-        <img
+        <svg
           class="close-btn tw-absolute tw-w-6 tw-bg-gray tw-rounded-full tw-cursor-pointer tw-p-1"
-          src="https://res.cloudinary.com/djalafcj9/image/upload/v1635485821/getequityV2/close_muxdyb.webp"
-          alt="close icon"
-          @click="$emit('close')"
-        />
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          @click="$router.go(-1)"
+        >
+          <path
+            d="M20.3284 11.0001V13.0001L7.50011 13.0001L10.7426 16.2426L9.32842 17.6568L3.67157 12L9.32842 6.34314L10.7426 7.75735L7.49988 11.0001L20.3284 11.0001Z"
+            fill="currentColor"
+          />
+        </svg>
         <div class="slot">
           <slot name="content">content</slot>
         </div>

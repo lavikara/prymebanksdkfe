@@ -6,8 +6,9 @@
       :disabled="loading || disabled"
     >
       <span v-show="!loading"
-        >{{ title }} {{ formatCurrency(amount, 2, "NGN") }}</span
-      >
+        >{{ title }}
+        <span v-if="amount">{{ formatCurrency(amount, 2, "NGN") }}</span>
+      </span>
       <img
         v-show="loading"
         class="tw-m-auto"
@@ -27,7 +28,7 @@ export default {
 
   props: {
     title: { type: String, default: () => "", required: true },
-    amount: { type: String, default: () => "", required: true },
+    amount: { type: String, default: () => "" },
     loading: { type: Boolean, default: () => false },
     disabled: { type: Boolean, default: () => false },
     bgColour: { type: String, default: () => "" },
