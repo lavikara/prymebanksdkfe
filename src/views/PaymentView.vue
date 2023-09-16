@@ -3,16 +3,23 @@
     <Loader v-if="loading" />
     <MediumModal>
       <template v-slot:content>
-        <div class="tw-flex">
+        <div class="tw-flex tw-border tw-rounded-lg">
           <Sidebar />
           <div class="tw-w-full">
-            <div class="tw-p-4">
+            <div class="tw-relative tw-min-h-full tw-p-4">
               <TopHeader />
               <router-view v-slot="{ Component }">
                 <transition name="fade-transform" mode="out-in">
                   <component :is="Component" />
                 </transition>
               </router-view>
+              <ComingSoon
+                v-if="
+                  $route.name === 'UssdLayout' ||
+                  $route.name === 'BankLayout' ||
+                  $route.name === 'CardLayout'
+                "
+              />
             </div>
           </div>
         </div>
@@ -26,6 +33,7 @@ import { mapActions, mapState } from "vuex";
 import MediumModal from "@/components/general/MediumModal.vue";
 import Sidebar from "@/layout/navigation/Sidebar.vue";
 import TopHeader from "@/layout/navigation/TopHeader.vue";
+import ComingSoon from "@/components/general/ComingSoon.vue";
 
 export default {
   name: "DashboardView",
@@ -34,6 +42,7 @@ export default {
     Sidebar,
     TopHeader,
     MediumModal,
+    ComingSoon,
   },
 
   data() {

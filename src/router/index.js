@@ -52,6 +52,24 @@ const routes = [
             "@/layout/payment/CardLayout.vue"
           ),
       },
+      {
+        path: "/payment/bank",
+        name: "BankLayout",
+        component: () =>
+          import(
+            /* webpackChunkName: "PaymentView" */
+            "@/layout/payment/BankLayout.vue"
+          ),
+      },
+      {
+        path: "/payment/ussd",
+        name: "UssdLayout",
+        component: () =>
+          import(
+            /* webpackChunkName: "PaymentView" */
+            "@/layout/payment/UssdLayout.vue"
+          ),
+      },
     ],
   },
 ];
@@ -59,6 +77,7 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  linkActiveClass: "link-active",
   scrollBehavior(to, from) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {

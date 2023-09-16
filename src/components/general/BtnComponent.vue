@@ -2,7 +2,7 @@
   <div class="tw-w-full">
     <button
       type="submit"
-      class="tw-w-full tw-flex tw-justify-center tw-bg-primary tw-rounded tw-font-semibold hover:tw-bg-green-bg1 tw-text-white tw-p-4"
+      class="tw-w-full tw-flex tw-justify-center tw-bg-primary tw-rounded tw-text-sm tw-font-bold hover:tw-bg-green-bg1 tw-text-white tw-p-4"
       :disabled="loading || disabled"
     >
       <span v-show="!loading"

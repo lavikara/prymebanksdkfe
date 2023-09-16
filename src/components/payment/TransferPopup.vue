@@ -22,10 +22,10 @@
         </div>
       </div>
       <p
-        class="tw-max-w-xs tw-text-center tw-text-orange tw-font-bold tw-text-xs tw-mt-4 tw-mb-8 tw-mx-auto"
+        class="tw-max-w-[16rem] tw-text-center tw-text-orange tw-font-bold tw-text-xs tw-mt-4 tw-mb-8 tw-mx-auto"
       >
         Search for Solid Allianze or Pryme bank on your bank app. Use this
-        account for this transaction only
+        account number for this transaction only.
       </p>
       <div class="tw-text-center tw-mb-4">
         <h3>Expires in</h3>

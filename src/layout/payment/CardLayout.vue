@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="card-layout">
     <CardPopup />
   </div>
 </template>

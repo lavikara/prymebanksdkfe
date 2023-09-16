@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="transfer-layout">
     <TransferPopup />
   </div>
 </template>

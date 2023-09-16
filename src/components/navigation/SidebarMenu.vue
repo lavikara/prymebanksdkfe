@@ -3,7 +3,8 @@
     <li>
       <router-link
         :to="href"
-        class="tw-flex tw-font-bold tw-cursor-pointer tw-text-white hover:tw-text-green-bg4 tw-pl-4 tw-pr-6 tw-py-4"
+        :replace="true"
+        class="tw-flex tw-font-bold tw-cursor-pointer tw-text-white tw-uppercase tw-text-xs hover:tw-text-green-bg4 tw-pl-4 tw-pr-6 tw-py-4"
       >
         <span class="">
           {{ title }}
@@ -19,7 +20,7 @@ export default {
 
   props: {
     title: { type: String, default: () => "", required: true },
-    href: { type: String, default: () => "" },
+    href: { type: Object, default: () => {} },
     focus: { type: Boolean, default: () => false },
   },
 };

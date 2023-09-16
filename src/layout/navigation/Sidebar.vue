@@ -1,12 +1,12 @@
 <template>
   <div
     id="sidebar"
-    class="tw-bg-green tw-border-r xl:tw-inline-block tw-py-4 tw-z-10"
+    class="tw-bg-green tw-border-r tw-rounded-tl-lg tw-rounded-bl-lg tw-py-4 tw-z-10"
   >
     <div class="sidebar-container tw-h-full tw-overflow-y-scroll">
       <nav>
         <h3
-          class="tw-whitespace-nowrap tw-font-bold tw-text-white tw-text-xs tw-pl-4 tw-pr-6 tw-mb-4 tw-mt-8"
+          class="tw-whitespace-nowrap tw-text-white tw-text-xs tw-pl-4 tw-pr-6 tw-mb-4 tw-mt-8"
         >
           PAY WITH
         </h3>
@@ -25,11 +25,19 @@
           />
         </div>
         <div>
-          <SidebarMenu title="Bank" class="tw-border-t" />
+          <SidebarMenu
+            title="Bank"
+            :href="{ name: 'BankLayout' }"
+            class="tw-border-t"
+          />
         </div>
 
         <div>
-          <SidebarMenu title="USSD" class="tw-border-t tw-border-b" />
+          <SidebarMenu
+            title="USSD"
+            :href="{ name: 'UssdLayout' }"
+            class="tw-border-t tw-border-b"
+          />
         </div>
       </nav>
     </div>
