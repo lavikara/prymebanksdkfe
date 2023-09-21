@@ -10,6 +10,8 @@ export default {
 
   mounted() {
     this.getDepositeStatus(this.$route.params.id);
+    console.log(document.getElementById("pryme--app-loader"));
+    document.getElementById("pryme--app-loader").remove();
   },
 
   methods: {
