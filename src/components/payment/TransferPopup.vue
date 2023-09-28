@@ -28,6 +28,7 @@
         account number for this transaction only.
       </p>
       <div class="tw-text-center tw-mb-4">
+        <p ref="timer" class="tw-text-green">{{ timer }}</p>
         <h3>Expires in</h3>
       </div>
       <Btn title="I've Sent The Money" @click="confirm" />
@@ -36,7 +37,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapActions, mapState } from "vuex";
 import Btn from "@/components/general/BtnComponent.vue";
 import { formatCurrency } from "@/utils/helpers.js";
 
@@ -50,10 +51,17 @@ export default {
   computed: {
     ...mapState({
       depositeStatus: (state) => state.depositeStatus,
+      timer: (state) => state.timer,
     }),
   },
 
+  mounted() {
+    this.startCountdown();
+  },
+
   methods: {
+    ...mapActions(["startCountdown"]),
+
     formatCurrency,
 
     confirm() {},

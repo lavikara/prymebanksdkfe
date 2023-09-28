@@ -5,3 +5,7 @@ export const SET_DEPOSIT_STATUS = (state, payload) => {
 export const SET_EMAIL = (state, payload) => {
   state.email = payload;
 };
+
+export const SET_COUNTDOWN = (state, payload) => {
+  state.timer = payload;
+};

@@ -45,26 +45,6 @@ exports.calculateMin = (time) => {
   return min;
 };
 
-/* This function takes a date as an argument and returns a string in the format of `hh:mm:ss` */
-exports.getTimeLeft = (countDownDate) => {
-  const now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  const distance = countDownDate - now;
-  if (distance < 0) return "EXPIRED";
-  // Time calculations for days, hours, minutes and seconds
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  const pad = function (num) {
-    return num < 10 ? "0" + num : num;
-  };
-  return `${days} : ${pad(hours)}  :  ${pad(minutes)}:  ${pad(seconds)}`;
-};
-
 /* A function that takes a string as an argument and returns the string with each word capitalized. */
 exports.capitalizeEachWord = (string) => {
   if (!string) return;
@@ -110,18 +90,6 @@ exports.removeUnderscore = (value) => {
   return splitValue.join(" ");
 };
 
-exports.getRandomColour = function () {
-  const activityColours = [
-    "#3C7CBC",
-    "#00BB5D",
-    "#F7B633",
-    "#070E14",
-    "#DA0A0A",
-  ];
-  const number = Math.floor(Math.random() * activityColours.length);
-  return activityColours[number];
-};
-
 /* This function is used to convert a number to a locale string. */
 exports.convertToLocale = function (price) {
   if (price) {
@@ -132,41 +100,4 @@ exports.convertToLocale = function (price) {
 /* This function is used to check if a string is empty or not. */
 exports.blankString = function (str) {
   return !str || /^\s*$/.test(str);
-};
-
-exports.vestingFrequency = function (value) {
-  let frequency = null;
-  switch (value) {
-    case "Daily":
-      frequency = 1;
-      break;
-    case 1:
-      frequency = "Daily";
-      break;
-    case 30:
-      frequency = "Monthly";
-      break;
-    case "Monthly":
-      frequency = 30;
-      break;
-    case 91:
-      frequency = "Quarterly";
-      break;
-    case "Quarterly":
-      frequency = 91;
-      break;
-    case 182:
-      frequency = "Bi-annually";
-      break;
-    case "Bi-annually":
-      frequency = 182;
-      break;
-    case 365:
-      frequency = "Yearly";
-      break;
-    case "Yearly":
-      frequency = 365;
-      break;
-  }
-  return frequency;
 };
