@@ -24,20 +24,21 @@ export const startCountdown = async ({ state, commit }, payload) => {
     const now = new Date().getTime();
 
     const difference = countDownDate - now;
-
+    let timer = "";
     let days = Math.floor(difference / (1000 * 60 * 60 * 24));
     let hours = Math.floor(
       (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     );
     let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((difference % (1000 * 60)) / 1000);
-    const timer = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    timer = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
     commit("SET_COUNTDOWN", timer);
 
     if (difference < 0) {
       clearInterval(countdown);
-      this.timer = "EXPIRED";
+      timer = "EXPIRED";
+      commit("SET_COUNTDOWN", timer);
     }
   }, 1000);
 };
