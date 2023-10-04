@@ -52,8 +52,16 @@ export default {
 
   methods: {
     closeModal() {
-      const div = document.getElementById("pryme--frame-container");
-      div.remove();
+      // console.log(window);
+      console.log(window.location);
+      // const div = document.getElementById("pryme--frame-container");
+      // div.remove();
+      // const ancestorOrigins = window.location.ancestorOrigins[0];
+      // window.location.replace(ancestorOrigins);
+      // console.log(document);
+      // const div = document.getElementById("pryme--frame-container");
+      // div.remove();
+      location.replace("");
     },
   },
 };
