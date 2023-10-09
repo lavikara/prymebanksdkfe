@@ -29,7 +29,7 @@
       </p>
       <div class="tw-text-center tw-mb-4">
         <p ref="timer" class="tw-text-green">{{ timer }}</p>
-        <h3>Expires in</h3>
+        <h3 v-if="timer !== 'EXPIRED'">Expires in</h3>
       </div>
       <Btn title="I've Sent The Money" @click="confirm" />
     </div>
