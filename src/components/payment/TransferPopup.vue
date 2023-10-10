@@ -22,16 +22,27 @@
         </div>
       </div>
       <p
+        v-if="timer !== 'EXPIRED'"
         class="tw-max-w-[16rem] tw-text-center tw-text-orange tw-font-bold tw-text-xs tw-mt-4 tw-mb-8 tw-mx-auto"
       >
         Search for Solid Allianze or Pryme bank on your bank app. Use this
         account number for this transaction only.
       </p>
+      <p
+        v-if="timer === 'EXPIRED'"
+        class="tw-max-w-[16rem] tw-text-center tw-text-orange tw-font-bold tw-text-xs tw-mt-4 tw-mb-8 tw-mx-auto"
+      >
+        This payment account has expired, you need to initiate another payment.
+      </p>
       <div class="tw-text-center tw-mb-4">
         <p ref="timer" class="tw-text-green">{{ timer }}</p>
         <h3 v-if="timer !== 'EXPIRED'">Expires in</h3>
       </div>
-      <Btn title="I've Sent The Money" @click="confirm" />
+      <Btn
+        v-if="timer !== 'EXPIRED'"
+        title="I've Sent The Money"
+        @click="confirm"
+      />
     </div>
   </div>
 </template>
